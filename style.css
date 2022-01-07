@@ -10,7 +10,9 @@ body {
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
 }
-h1 {
+h1,
+h2,
+h3 {
   padding: 0;
   margin: 0;
 }
@@ -67,19 +69,18 @@ h1 {
 }
 
 .overlay {
-  background: #353648;
+  background-image: linear-gradient(to right, #353648, rgba(0, 0, 0, 0.966));
+  /* background-color: #4fcdff !important; */
   height: 100vh;
   padding: 0 0 0 0;
   margin: 0;
 }
 
 .content {
-  padding-top: 40vh;
+  margin: 0;
+  height: 50vh;
 }
 
-.projects {
-  padding-top: 10vh;
-}
 .first {
   color: white;
   background-image: url("");
@@ -141,12 +142,31 @@ h1 {
   margin: 0 auto;
 }
 
+.topbar {
+  padding: 5px 10px;
+  margin: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.topbar p {
+  margin: 0;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
+  .overlay {
+    background: #353648 !important;
+  }
   .floater {
     left: 46.5%;
   }
-  .content h1 {
-    font-size: 40px;
+  .content h1,
+  h3 {
+    font-size: 20px;
   }
   .textimage {
     width: 90%;
