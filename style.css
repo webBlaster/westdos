@@ -78,14 +78,33 @@ h3 {
 
 .content {
   margin: 0;
-  height: 50vh;
 }
 
 .first {
   color: white;
-  background-image: url("");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.first .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.first .content {
+  background-image: url("/pictures/three.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: inherit;
+}
+
+.intro {
+  font-size: 60px;
+  font-weight: bold;
 }
 .second {
   color: white;
