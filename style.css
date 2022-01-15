@@ -56,7 +56,6 @@ h3 {
   left: 49%;
   bottom: 2px;
   color: white;
-  transition: 2s;
 }
 
 .dots {
@@ -69,8 +68,9 @@ h3 {
 }
 
 .overlay {
-  background-image: linear-gradient(to right, #353648, rgba(0, 0, 0, 0.966));
+  /* background-image: linear-gradient(to right, #353648, rgba(0, 0, 0, 0.966)); */
   /* background-color: #4fcdff !important; */
+  background: #353648;
   height: 100vh;
   padding: 0 0 0 0;
   margin: 0;
@@ -82,83 +82,25 @@ h3 {
 
 .first {
   color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .first .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 10;
   width: 100%;
-  background-color: rgb(0, 0, 0) !important;
+  background-image: url("pictures/one.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: inherit;
+  transition: ease-in-out 0.5s;
 }
 
 .first .content {
-  background-image: url("/pictures/three.jpg") !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: inherit;
-}
-
-.intro {
-  font-size: 60px;
-  font-weight: bold;
-}
-.second {
-  color: white;
-  background-image: url("");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.third {
-  color: white;
-  background-image: url("");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.fourth {
-  color: white;
-  background-image: url("");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.logo {
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  height: 120px;
-  overflow: hidden;
-}
-.fancy-btn {
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid white;
-}
-.fancy-btn:hover {
-  background-color: rgba(255, 255, 255, 0.356);
-}
-
-.icons {
+  position: absolute;
+  z-index: 10;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  display: relative;
-}
-.icons li {
-  display: inline-block;
-  padding: 0;
-  width: 30%;
-}
-
-.icons img {
-  width: 60%;
-}
-
-.card-container {
-  width: 70%;
-  margin: 0 auto;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.719) !important;
 }
 
 .topbar {
@@ -177,20 +119,11 @@ h3 {
 }
 
 @media screen and (max-width: 700px) {
-  .overlay {
-    background: #353648 !important;
-  }
   .floater {
     left: 46.5%;
   }
   .content h1,
   h3 {
     font-size: 20px;
-  }
-  .textimage {
-    width: 90%;
-  }
-  .icons img {
-    width: 60%;
   }
 }

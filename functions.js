@@ -108,3 +108,25 @@ handleArrowKeys = (e) => {
 //add event listener
 floater.addEventListener("click", slideScreenDown);
 document.onkeydown = handleArrowKeys;
+
+//Background Slide Show
+
+let slide = document.querySelector(".image-slide");
+
+let images = [
+  "./pictures/one.jpg",
+  "./pictures/two.jpg",
+  "./pictures/three.jpg",
+];
+let currentImage = 0;
+
+function nextImage() {
+  slide.style.background = `url('${images[currentImage]}')`;
+  if (currentImage == 2) {
+    currentImage = 0;
+    return;
+  }
+  currentImage++;
+}
+
+setInterval(() => nextImage(), 5000);
